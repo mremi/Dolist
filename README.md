@@ -12,14 +12,16 @@ use Mremi\Dolist\Contact\ContactManager;
 use Mremi\Dolist\Contact\FieldManager;
 
 $contactSoapClient = new \SoapClient('http://api.dolist.net/v2/ContactManagementService.svc?wsdl', array(
-    'soap_version'       => 1,
+    'soap_version'       => SOAP_1_1,
     'trace'              => true,
     'connection_timeout' => 2,
+    // ...
 ));
 $authSoapClient = new \SoapClient('http://api.dolist.net/v2/AuthenticationService.svc?wsdl', array(
-    'soap_version'       => 1,
+    'soap_version'       => SOAP_1_1,
     'trace'              => true,
     'connection_timeout' => 2,
+    // ...
 ));
 $authRequest = new AuthenticationRequest('YOUR_ACCOUNT_IDENTIFIER', 'YOUR_AUTHENTICATION_KEY');
 $authManager = new AuthenticationManager($authSoapClient, $authRequest, 3);
@@ -40,6 +42,6 @@ if ($saved->isOk()) {
     // contact has been saved...
 } else {
     // something is wrong...
-    echo sprintf('%s %s', $saved->getReturnCode(), $saved->getDescription());
+    echo sprintf('Returned code: %s, description: %s', $saved->getReturnCode(), $saved->getDescription());
 }
 ```
