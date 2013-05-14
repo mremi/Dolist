@@ -1,6 +1,6 @@
 <?php
 
-namespace Mremi\Dolist\Api\Authentication;
+namespace Mremi\Dolist\Authentication;
 
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
 

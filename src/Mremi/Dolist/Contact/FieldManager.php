@@ -1,6 +1,6 @@
 <?php
 
-namespace Mremi\Dolist\Api\Contact;
+namespace Mremi\Dolist\Contact;
 
 /**
  * Field manager class

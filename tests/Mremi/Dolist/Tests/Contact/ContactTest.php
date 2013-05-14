@@ -1,9 +1,9 @@
 <?php
 
-namespace Mremi\Dolist\Tests\Api\Contact;
+namespace Mremi\Dolist\Tests\Contact;
 
-use Mremi\Dolist\Api\Contact\Contact;
-use Mremi\Dolist\Api\Contact\Field;
+use Mremi\Dolist\Contact\Contact;
+use Mremi\Dolist\Contact\Field;
 
 /**
  * Tests Contact class

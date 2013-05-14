@@ -1,8 +1,8 @@
 <?php
 
-namespace Mremi\Dolist\Tests\Api\Authentication;
+namespace Mremi\Dolist\Tests\Authentication;
 
-use Mremi\Dolist\Api\Authentication\AuthenticationRequest;
+use Mremi\Dolist\Authentication\AuthenticationRequest;
 
 /**
  * Tests AuthenticationRequest class

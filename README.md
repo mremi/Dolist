@@ -6,10 +6,10 @@ This library allows you to interact with the API of Dolist CRM.
 ```php
 <?php
 
-use Mremi\Dolist\Api\Authentication\AuthenticationManager;
-use Mremi\Dolist\Api\Authentication\AuthenticationRequest;
-use Mremi\Dolist\Api\Contact\ContactManager;
-use Mremi\Dolist\Api\Contact\FieldManager;
+use Mremi\Dolist\Authentication\AuthenticationManager;
+use Mremi\Dolist\Authentication\AuthenticationRequest;
+use Mremi\Dolist\Contact\ContactManager;
+use Mremi\Dolist\Contact\FieldManager;
 
 $contactSoapClient = new \SoapClient('http://api.dolist.net/v2/ContactManagementService.svc?wsdl', array(
     'soap_version'       => 1,
@@ -24,8 +24,8 @@ $authSoapClient = new \SoapClient('http://api.dolist.net/v2/AuthenticationServic
 $authRequest = new AuthenticationRequest('YOUR_ACCOUNT_IDENTIFIER', 'YOUR_AUTHENTICATION_KEY');
 $authManager = new AuthenticationManager($authSoapClient, $authRequest, 3);
 
-$contactManager = new ContactManager($contactSoapClient, $authManager, 'Mremi\\Dolist\\Api\\Contact\\Contact', 3);
-$fieldManager   = new FieldManager('Mremi\\Dolist\\Api\\Contact\\Field');
+$contactManager = new ContactManager($contactSoapClient, $authManager, 'Mremi\\Dolist\\Contact\\Contact', 3);
+$fieldManager   = new FieldManager('Mremi\\Dolist\\Contact\\Field');
 
 $contact = $contactManager->create();
 $contact->setEmail('test@example.com');

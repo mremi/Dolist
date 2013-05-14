@@ -1,8 +1,8 @@
 <?php
 
-namespace Mremi\Dolist\Api\Contact;
+namespace Mremi\Dolist\Contact;
 
-use Mremi\Dolist\Api\Authentication\AuthenticationManagerInterface;
+use Mremi\Dolist\Authentication\AuthenticationManagerInterface;
 
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
 

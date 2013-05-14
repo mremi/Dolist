@@ -1,13 +1,13 @@
 <?php
 
-namespace Mremi\Dolist\Api\Authentication;
+namespace Mremi\Dolist\Authentication;
 
 /**
- * Authentication request interface
+ * Authentication token context interface
  *
  * @author Rémi Marseille <marseille.remi@gmail.com>
  */
-interface AuthenticationRequestInterface
+interface AuthenticationTokenContextInterface
 {
     /**
      * Gets the account identifier
@@ -21,7 +21,7 @@ interface AuthenticationRequestInterface
      *
      * @return string
      */
-    function getAuthenticationKey();
+    function getKey();
 
     /**
      * Gets an array representation
