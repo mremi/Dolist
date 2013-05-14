@@ -80,6 +80,32 @@ class SavedContactInfo implements SavedContactInfoInterface
     /**
      * {@inheritdoc}
      */
+    public function getHandledCodes()
+    {
+        return array(
+            self::CODE_PENDING                     => 'pending',
+            self::CODE_ERROR                       => 'error',
+            self::CODE_SUCCESS                     => 'success',
+            self::CODE_UNAUTHORIZED_EMAIL          => 'unauthorized email',
+            self::CODE_EMAIL_ALREADY_EXIST         => 'email already exist',
+            self::CODE_UNAUTHORIZED_OPTOUT_EMAIL   => 'unauthorized optout email',
+            self::CODE_UNAUTHORIZED_OPTOUT_MOBILE  => 'unauthorized optout mobile',
+            self::CODE_ERROR_ON_INTEREST_TO_ADD    => 'error on interest to add',
+            self::CODE_ERROR_ON_INTEREST_TO_DELETE => 'error on interest to delete',
+        );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function isHandledCode()
+    {
+        return array_key_exists($this->returnCode, $this->getHandledCodes());
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function isOk()
     {
         return self::CODE_SUCCESS === $this->returnCode;

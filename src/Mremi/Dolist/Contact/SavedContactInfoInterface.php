@@ -51,6 +51,20 @@ interface SavedContactInfoInterface
     function getReturnCode();
 
     /**
+     * Gets an array of handled codes
+     *
+     * @return array
+     */
+    function getHandledCodes();
+
+    /**
+     * Returns TRUE whether the returned code is handled
+     *
+     * @return boolean
+     */
+    function isHandledCode();
+
+    /**
      * Returns TRUE whether the returned code is success
      *
      * @return boolean
