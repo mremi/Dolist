@@ -1,0 +1,20 @@
+{
+    "name": "mremi/dolist",
+    "type": "library",
+    "description": "A PHP5 library to interact with the API of Dolist CRM",
+    "keywords": ["CRM", "dolist", "api", "soap"],
+    "homepage": "https://github.com/mremi/Dolist",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rémi Marseille",
+            "email": "marseille.remi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": { "Mremi\\Dolist": "src" }
+    }
+}
