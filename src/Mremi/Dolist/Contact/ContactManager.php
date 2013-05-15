@@ -4,7 +4,7 @@ namespace Mremi\Dolist\Contact;
 
 use Mremi\Dolist\Authentication\AuthenticationManagerInterface;
 
-use Symfony\Component\HttpKernel\Log\LoggerInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * Contact manager class
@@ -83,7 +83,7 @@ class ContactManager implements ContactManagerInterface
                 return $response->SaveContactResult;
             } catch (\SoapFault $e) {
                 if (null !== $this->logger) {
-                    $this->logger->crit(sprintf('[%] %s', __CLASS__, $e->getMessage()));
+                    $this->logger->critical(sprintf('[%] %s', __CLASS__, $e->getMessage()));
                 }
 
                 if ($try >= $this->retries) {
@@ -129,7 +129,7 @@ class ContactManager implements ContactManagerInterface
                 return $saved;
             } catch (\SoapFault $e) {
                 if (null !== $this->logger) {
-                    $this->logger->crit(sprintf('[%] %s', __CLASS__, $e->getMessage()));
+                    $this->logger->critical(sprintf('[%] %s', __CLASS__, $e->getMessage()));
                 }
 
                 if ($try >= $this->retries) {

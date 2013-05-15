@@ -2,7 +2,7 @@
 
 namespace Mremi\Dolist\Authentication;
 
-use Symfony\Component\HttpKernel\Log\LoggerInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * Authentication manager class
@@ -86,7 +86,7 @@ class AuthenticationManager implements AuthenticationManagerInterface
                 return new AuthenticationTokenResponse(new \DateTime($response->GetAuthenticationTokenResult->DeprecatedDate), $response->GetAuthenticationTokenResult->Key);
             } catch (\SoapFault $e) {
                 if (null !== $this->logger) {
-                    $this->logger->crit(sprintf('[%] %s', __CLASS__, $e->getMessage()));
+                    $this->logger->critical(sprintf('[%] %s', __CLASS__, $e->getMessage()));
                 }
 
                 if ($try >= $this->retries) {
