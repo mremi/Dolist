@@ -7,7 +7,7 @@ namespace Mremi\Dolist\Contact;
  *
  * @author Rémi Marseille <marseille.remi@gmail.com>
  */
-class Field implements FieldInterface
+class Field
 {
     /**
      * @var string
@@ -32,7 +32,9 @@ class Field implements FieldInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Sets the field name
+     *
+     * @param string $name
      */
     public function setName($name)
     {
@@ -40,7 +42,9 @@ class Field implements FieldInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the field name
+     *
+     * @return string
      */
     public function getName()
     {
@@ -48,7 +52,9 @@ class Field implements FieldInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Sets the field value
+     *
+     * @param string $value
      */
     public function setValue($value)
     {
@@ -56,7 +62,9 @@ class Field implements FieldInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the field value
+     *
+     * @return string
      */
     public function getValue()
     {
@@ -64,7 +72,9 @@ class Field implements FieldInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets an array representation
+     *
+     * @return array
      */
     public function toArray()
     {

@@ -17,7 +17,7 @@ class AuthenticationManager implements AuthenticationManagerInterface
     private $soapClient;
 
     /**
-     * @var AuthenticationRequestInterface
+     * @var AuthenticationRequest
      */
     private $authenticationRequest;
 
@@ -32,19 +32,19 @@ class AuthenticationManager implements AuthenticationManagerInterface
     private $logger;
 
     /**
-     * @var AuthenticationTokenResponseInterface
+     * @var AuthenticationTokenResponse
      */
     private $authenticationTokenResponse;
 
     /**
      * Constructor
      *
-     * @param \SoapClient                    $soapClient            A Soap client instance
-     * @param AuthenticationRequestInterface $authenticationRequest An authentication request instance
-     * @param integer                        $retries               An integer to retry many times, optional
-     * @param LoggerInterface                $logger                A logger instance, optional
+     * @param \SoapClient           $soapClient            A Soap client instance
+     * @param AuthenticationRequest $authenticationRequest An authentication request instance
+     * @param integer               $retries               An integer to retry many times, optional
+     * @param LoggerInterface       $logger                A logger instance, optional
      */
-    public function __construct(\SoapClient $soapClient, AuthenticationRequestInterface $authenticationRequest, $retries = 1, LoggerInterface $logger = null)
+    public function __construct(\SoapClient $soapClient, AuthenticationRequest $authenticationRequest, $retries = 1, LoggerInterface $logger = null)
     {
         $this->soapClient            = $soapClient;
         $this->authenticationRequest = $authenticationRequest;
@@ -67,7 +67,7 @@ class AuthenticationManager implements AuthenticationManagerInterface
     /**
      * Calls the authentication API
      *
-     * @return AuthenticationTokenResponseInterface
+     * @return AuthenticationTokenResponse
      *
      * @throws \SoapFault
      */

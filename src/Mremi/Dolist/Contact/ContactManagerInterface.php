@@ -12,27 +12,27 @@ interface ContactManagerInterface
     /**
      * Creates a new contact instance
      *
-     * @return ContactInterface
+     * @return Contact
      */
     function create();
 
     /**
      * Calls the API to save the given contact
      *
-     * @param ContactInterface $contact
+     * @param Contact $contact
      *
      * @return string
      *
      * @throws \SoapFault
      */
-    function save(ContactInterface $contact);
+    function save(Contact $contact);
 
     /**
      * Calls the API to get the status of the given ticket
      *
      * @param string $ticket
      *
-     * @return SavedContactInfoInterface
+     * @return SavedContactInfo
      *
      * @throws \SoapFault
      */

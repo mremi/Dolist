@@ -7,7 +7,7 @@ namespace Mremi\Dolist\Authentication;
  *
  * @author Rémi Marseille <marseille.remi@gmail.com>
  */
-class AuthenticationTokenContext implements AuthenticationTokenContextInterface
+class AuthenticationTokenContext
 {
     /**
      * @var integer
@@ -32,7 +32,9 @@ class AuthenticationTokenContext implements AuthenticationTokenContextInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the account identifier
+     *
+     * @return integer
      */
     public function getAccountId()
     {
@@ -40,7 +42,9 @@ class AuthenticationTokenContext implements AuthenticationTokenContextInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the authentication key
+     *
+     * @return string
      */
     public function getKey()
     {
@@ -48,7 +52,9 @@ class AuthenticationTokenContext implements AuthenticationTokenContextInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets an array representation
+     *
+     * @return array
      */
     public function toArray()
     {

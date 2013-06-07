@@ -7,7 +7,7 @@ namespace Mremi\Dolist\Contact;
  *
  * @author Rémi Marseille <marseille.remi@gmail.com>
  */
-class FieldManager implements FieldManagerInterface
+class FieldManager
 {
     /**
      * @var string
@@ -25,7 +25,12 @@ class FieldManager implements FieldManagerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * Creates a new field instance
+     *
+     * @param string $name  The field name
+     * @param string $value The associated value
+     *
+     * @return Field
      */
     public function create($name, $value)
     {

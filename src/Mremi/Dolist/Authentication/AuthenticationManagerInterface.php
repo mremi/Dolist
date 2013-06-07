@@ -12,7 +12,7 @@ interface AuthenticationManagerInterface
     /**
      * Gets the authentication token context
      *
-     * @return AuthenticationTokenContextInterface
+     * @return AuthenticationTokenContext
      *
      * @throws \SoapFault
      */

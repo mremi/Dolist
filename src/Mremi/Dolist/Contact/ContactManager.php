@@ -67,7 +67,7 @@ class ContactManager implements ContactManagerInterface
     /**
      * {@inheritDoc}
      */
-    public function save(ContactInterface $contact)
+    public function save(Contact $contact)
     {
         $try = 0;
 

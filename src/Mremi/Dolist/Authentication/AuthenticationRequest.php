@@ -7,7 +7,7 @@ namespace Mremi\Dolist\Authentication;
  *
  * @author Rémi Marseille <marseille.remi@gmail.com>
  */
-class AuthenticationRequest implements AuthenticationRequestInterface
+class AuthenticationRequest
 {
     /**
      * @var integer
@@ -32,7 +32,9 @@ class AuthenticationRequest implements AuthenticationRequestInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the account identifier
+     *
+     * @return integer
      */
     public function getAccountId()
     {
@@ -40,7 +42,9 @@ class AuthenticationRequest implements AuthenticationRequestInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the authentication key
+     *
+     * @return string
      */
     public function getAuthenticationKey()
     {
@@ -48,7 +52,9 @@ class AuthenticationRequest implements AuthenticationRequestInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets an array representation
+     *
+     * @return array
      */
     public function toArray()
     {

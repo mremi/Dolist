@@ -7,7 +7,7 @@ namespace Mremi\Dolist\Authentication;
  *
  * @author Rémi Marseille <marseille.remi@gmail.com>
  */
-class AuthenticationTokenResponse implements AuthenticationTokenResponseInterface
+class AuthenticationTokenResponse
 {
     /**
      * @var \DateTime
@@ -32,7 +32,9 @@ class AuthenticationTokenResponse implements AuthenticationTokenResponseInterfac
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the end date of validity
+     *
+     * @return \DateTime
      */
     public function getDeprecatedDate()
     {
@@ -40,7 +42,9 @@ class AuthenticationTokenResponse implements AuthenticationTokenResponseInterfac
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the token key
+     *
+     * @return string
      */
     public function getKey()
     {
@@ -48,7 +52,9 @@ class AuthenticationTokenResponse implements AuthenticationTokenResponseInterfac
     }
 
     /**
-     * {@inheritdoc}
+     * Returns TRUE whether this token is deprecated
+     *
+     * @return boolean
      */
     public function isDeprecated()
     {
