@@ -29,11 +29,6 @@ class ContactManager implements ContactManagerInterface
     private $retries;
 
     /**
-     * @var string
-     */
-    private $class;
-
-    /**
      * @var LoggerInterface
      */
     private $logger;
@@ -43,15 +38,13 @@ class ContactManager implements ContactManagerInterface
      *
      * @param \SoapClient                    $soapClient            A Soap client instance
      * @param AuthenticationManagerInterface $authenticationManager An authentication manager instance
-     * @param string                         $class                 The namespace of contact class
      * @param integer                        $retries               An integer to retry many times, optional
      * @param LoggerInterface                $logger                A logger instance, optional
      */
-    public function __construct(\SoapClient $soapClient, AuthenticationManagerInterface $authenticationManager, $class, $retries = 1, LoggerInterface $logger = null)
+    public function __construct(\SoapClient $soapClient, AuthenticationManagerInterface $authenticationManager, $retries = 1, LoggerInterface $logger = null)
     {
         $this->soapClient            = $soapClient;
         $this->authenticationManager = $authenticationManager;
-        $this->class                 = $class;
         $this->retries               = $retries;
         $this->logger                = $logger;
     }
@@ -61,7 +54,7 @@ class ContactManager implements ContactManagerInterface
      */
     public function create()
     {
-        return new $this->class;
+        return new Contact;
     }
 
     /**

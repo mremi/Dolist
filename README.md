@@ -26,8 +26,8 @@ $authSoapClient = new \SoapClient('http://api.dolist.net/v2/AuthenticationServic
 $authRequest = new AuthenticationRequest('YOUR_ACCOUNT_IDENTIFIER', 'YOUR_AUTHENTICATION_KEY');
 $authManager = new AuthenticationManager($authSoapClient, $authRequest, 3);
 
-$contactManager = new ContactManager($contactSoapClient, $authManager, 'Mremi\\Dolist\\Contact\\Contact', 3);
-$fieldManager   = new FieldManager('Mremi\\Dolist\\Contact\\Field');
+$contactManager = new ContactManager($contactSoapClient, $authManager, 3);
+$fieldManager   = new FieldManager;
 
 $contact = $contactManager->create();
 $contact->setEmail('test@example.com');

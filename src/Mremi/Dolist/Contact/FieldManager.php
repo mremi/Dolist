@@ -10,21 +10,6 @@ namespace Mremi\Dolist\Contact;
 class FieldManager
 {
     /**
-     * @var string
-     */
-    private $class;
-
-    /**
-     * Constructor
-     *
-     * @param string $class The namespace of field class
-     */
-    public function __construct($class)
-    {
-        $this->class = $class;
-    }
-
-    /**
      * Creates a new field instance
      *
      * @param string $name  The field name
@@ -34,6 +19,6 @@ class FieldManager
      */
     public function create($name, $value)
     {
-        return new $this->class($name, $value);
+        return new Field($name, $value);
     }
 }
