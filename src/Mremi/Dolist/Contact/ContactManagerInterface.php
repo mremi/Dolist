@@ -37,4 +37,15 @@ interface ContactManagerInterface
      * @throws \SoapFault
      */
     function getStatusByTicket($ticket);
+
+    /**
+     * Calls the API to retrieve contacts of the given request
+     *
+     * @param GetContactRequest $request
+     *
+     * @return GetContactResponse
+     *
+     * @throws \SoapFault
+     */
+    function getContacts(GetContactRequest $request = null);
 }

@@ -10,6 +10,7 @@ use Mremi\Dolist\Authentication\AuthenticationManager;
 use Mremi\Dolist\Authentication\AuthenticationRequest;
 use Mremi\Dolist\Contact\ContactManager;
 use Mremi\Dolist\Contact\FieldManager;
+use Mremi\Dolist\Contact\GetContactRequest;
 
 $contactSoapClient = new \SoapClient('http://api.dolist.net/v2/ContactManagementService.svc?wsdl', array(
     'soap_version'       => SOAP_1_1,
@@ -44,4 +45,11 @@ if ($saved->isOk()) {
     // something is wrong...
     echo sprintf('Returned code: %s, description: %s', $saved->getReturnCode(), $saved->getDescription());
 }
+
+// retrieve contacts
+$request = new GetContactRequest;
+$request->setOffset(50);
+// ...
+$contacts = $contactManager->getContacts($request);
+// ...
 ```
