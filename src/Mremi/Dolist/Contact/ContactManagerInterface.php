@@ -14,7 +14,7 @@ interface ContactManagerInterface
      *
      * @return Contact
      */
-    function create();
+    public function create();
 
     /**
      * Calls the API to save the given contact
@@ -25,7 +25,7 @@ interface ContactManagerInterface
      *
      * @throws \SoapFault
      */
-    function save(Contact $contact);
+    public function save(Contact $contact);
 
     /**
      * Calls the API to get the status of the given ticket
@@ -36,7 +36,7 @@ interface ContactManagerInterface
      *
      * @throws \SoapFault
      */
-    function getStatusByTicket($ticket);
+    public function getStatusByTicket($ticket);
 
     /**
      * Calls the API to retrieve contacts of the given request
@@ -47,5 +47,5 @@ interface ContactManagerInterface
      *
      * @throws \SoapFault
      */
-    function getContacts(GetContactRequest $request = null);
+    public function getContacts(GetContactRequest $request = null);
 }

@@ -16,5 +16,5 @@ interface AuthenticationManagerInterface
      *
      * @throws \SoapFault
      */
-    function getAuthenticationTokenContext();
+    public function getAuthenticationTokenContext();
 }
