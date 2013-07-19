@@ -1,6 +1,10 @@
 Dolist library
 ==============
 
+[![Build Status](https://api.travis-ci.org/mremi/Dolist.png?branch=master)](https://travis-ci.org/mremi/Dolist)
+[![Total Downloads](https://poser.pugx.org/mremi/Dolist/downloads.png)](https://packagist.org/packages/mremi/Dolist)
+[![Latest Stable Version](https://poser.pugx.org/mremi/Dolist/v/stable.png)](https://packagist.org/packages/mremi/Dolist)
+
 This library allows you to interact with the API of Dolist CRM.
 
 ```php
