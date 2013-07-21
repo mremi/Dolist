@@ -7,6 +7,42 @@ Dolist library
 
 This library allows you to interact with the API of Dolist CRM.
 
+**Basic Docs**
+
+* [Installation](#installation)
+* [Add a contact](#add-contact)
+* [Retrieve contacts](#retrieve-contacts)
+
+<a name="installation"></a>
+
+## Installation
+
+Only 1 step:
+
+### Download Dolist using composer
+
+Add Dolist in your composer.json:
+
+```js
+{
+    "require": {
+        "mremi/dolist": "dev-master"
+    }
+}
+```
+
+Now tell composer to download the library by running the command:
+
+``` bash
+$ php composer.phar update mremi/dolist
+```
+
+Composer will install the library to your project's `vendor/mremi` directory.
+
+<a name="add-contact"></a>
+
+## Add/update a contact
+
 ```php
 <?php
 
@@ -14,7 +50,6 @@ use Mremi\Dolist\Authentication\AuthenticationManager;
 use Mremi\Dolist\Authentication\AuthenticationRequest;
 use Mremi\Dolist\Contact\ContactManager;
 use Mremi\Dolist\Contact\FieldManager;
-use Mremi\Dolist\Contact\GetContactRequest;
 
 $contactSoapClient = new \SoapClient('http://api.dolist.net/v2/ContactManagementService.svc?wsdl', array(
     'soap_version'       => SOAP_1_1,
@@ -49,8 +84,17 @@ if ($saved->isOk()) {
     // something is wrong...
     echo sprintf('Returned code: %s, description: %s', $saved->getReturnCode(), $saved->getDescription());
 }
+```
 
-// retrieve contacts
+<a name="retrieve-contacts"></a>
+
+## Retrieve contacts
+
+```php
+<?php
+
+use Mremi\Dolist\Contact\GetContactRequest;
+
 $request = new GetContactRequest;
 $request->setOffset(50);
 // ...
