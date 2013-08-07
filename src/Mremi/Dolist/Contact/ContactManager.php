@@ -50,7 +50,7 @@ class ContactManager implements ContactManagerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function create()
     {
@@ -58,7 +58,7 @@ class ContactManager implements ContactManagerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function save(Contact $contact)
     {
@@ -90,7 +90,7 @@ class ContactManager implements ContactManagerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getStatusByTicket($ticket)
     {
@@ -136,7 +136,7 @@ class ContactManager implements ContactManagerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getContacts(GetContactRequest $request = null)
     {
