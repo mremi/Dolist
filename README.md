@@ -1,6 +1,8 @@
 Dolist library
 ==============
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/cae6de7a-ac8e-4ef7-a442-b00fa5098dc9/big.png)](https://insight.sensiolabs.com/projects/cae6de7a-ac8e-4ef7-a442-b00fa5098dc9)
+
 [![Build Status](https://api.travis-ci.org/mremi/Dolist.png?branch=master)](https://travis-ci.org/mremi/Dolist)
 [![Total Downloads](https://poser.pugx.org/mremi/Dolist/downloads.png)](https://packagist.org/packages/mremi/Dolist)
 [![Latest Stable Version](https://poser.pugx.org/mremi/Dolist/v/stable.png)](https://packagist.org/packages/mremi/Dolist)
